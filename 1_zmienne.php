@@ -10,6 +10,7 @@
     <?php
     $name='Anna';
     echo'Imię: $name<br>';
+    echo'Imię: $name<br>';
     echo"Imię: $name<br>";
     //konkatenacja
     echo'WSB'.'<hr>';
