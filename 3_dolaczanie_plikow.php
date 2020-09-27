@@ -8,6 +8,7 @@
 <body>
 Początek pliku
 <?php
+$name='Anna';
 include'.\3_pliki\file.php';
 ?>
 Koniec pliku
