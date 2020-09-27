@@ -9,7 +9,10 @@
 Początek pliku
 <?php
 $name='Anna';
-include'.\3_pliki\file.php';
+include '.\3_pliki\file.php';
+include_once '.\3_pliki\file.php1';
+echo'Require:<br>';
+require '.\3_pliki\file.php'
 ?>
 Koniec pliku
     
