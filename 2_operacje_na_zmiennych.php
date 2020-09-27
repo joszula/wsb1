@@ -20,5 +20,16 @@ if ($x===$y) {
 else{
     echo'$x nie jest identyczna $y'<br>;
 }
-echo
+echo gettype($x);//integer
+echo gettype($y)'<hr>';//double
+
+$x=-10;
+$y=1;
+
+echo $x<=>$y;
+echo <hr>;
+
+$x=2;
+$x=$x++;
+echo$x;
 ?>
