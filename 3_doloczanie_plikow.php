@@ -8,7 +8,7 @@
 <body>
 Początek pliku
 <?php
-include'.\3_pliki\';
+include'.\3_pliki\file.php';
 ?>
 Koniec pliku
     
