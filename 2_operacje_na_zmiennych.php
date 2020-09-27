@@ -81,6 +81,25 @@ echo'Typ danych $x: ',gettype($x),'<hr>';//null
 echo PHP_INT_SIZE,'<br>';
 
 //kontrola typu zmienych
-//
+//is_int(), is_float(),is_numeric(), is_boll(),is_null(),
+$x=1.0;
+echo is_numeric($x);
+$w;
+//operator ignorowania błędów
+echo @gettype($w);
+//stała predefinowana
+echo PHP_VERSION,'<br>';
+$ver = PHP_VERSION;
+if ($ver >= 7.4) {
+    echo'Nowa wersja php';
+}
+else{
+    echo'Stara wersja php';
+}
+echo'<br>';
+//stałe
+//nazwy z dużych liter
+define('NAME', 'Janusz',true );
+echo NAME;
 
 ?>
