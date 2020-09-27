@@ -46,4 +46,41 @@ echo$y;
 $y=++$x*2-1;
 echo$x;
 echo$y;
+
+//operatory rzutowania
+//boll, int, float, string, array, object, unset
+$x='123abc45';
+echo"$x<br>";
+echo'Typ danych $x: ',gettype($x),'<br>';
+$x=(int)$x;
+echo"$x<br>";
+echo'Typ danych $x: ',gettype($x),'<hr>';
+
+$x=0;
+echo"$x<br>";
+echo'Typ danych $x: ',gettype($x),'<br>';
+$x=(bool)$x;
+echo"$x<br>";
+echo'Typ danych $x: ',gettype($x),'<hr>';
+
+$x=10;
+echo"$x<br>";
+echo'Typ danych $x: ',gettype($x),'<br>';
+$x=(float)$x;
+echo"$x<br>";
+echo'Typ danych $x: ',gettype($x),'<hr>';
+
+$x=10;
+echo"$x<br>";
+echo'Typ danych $x: ',gettype($x),'<br>';
+$x=(unset)$x;
+echo"$x<br>";//false
+echo'Typ danych $x: ',gettype($x),'<hr>';//null
+
+//rozmiar typu integer
+echo PHP_INT_SIZE,'<br>';
+
+//kontrola typu zmienych
+//
+
 ?>
