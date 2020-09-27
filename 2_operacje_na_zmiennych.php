@@ -9,13 +9,13 @@ echo"$x<br>" ;
 $x=1;
 $y=1;
 if ($x==$y) {
-    echo'$x jest równa $y'<br>;
+    echo'$x jest równa $y<br>';
 }
 else{
-    echo'$x jest równa $y'<br>;
+    echo'$x jest równa $y<br>';
 }
 if ($x===$y) {
-    echo'$x jest równa $y'<br>;
+    echo'$x jest równa $y<br>';
 }
 else{
     echo'$x nie jest identyczna $y'<br>;
