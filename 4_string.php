@@ -42,4 +42,19 @@
     echo strlen(rtrim($name1));//7
     echo strlen(trim($name1));//5
     $name = trim($name);
+    echo strlen($name);//5
+    echo '<br>';
+
+    //przeszukiwanie danych
+    $text = 'Poznan, ul. Rynek Jeżycki 13, tel. 61627 00 00';
+    $search= strstr($text,'tel');
+    echo $search;
+    echo '<br>';
+    $search = stristr($text, 'Tel');
+    echo $search;
+    echo '<br>';
+    $search = stristr($text, 'Tel', true);
+    echo $search;
+    echo '<br>';
+    //znajdz domenę pobraną od użytkownika;
 ?>
