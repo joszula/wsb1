@@ -73,5 +73,21 @@
     echo '<br>';
     $surname = substr('Katarzyna Nowak',3,5);
     echo $surname;//arzyn
-    
+    echo '<br>';
+    echo '<hr>';
+
+
+    $name = 'Mirosław';
+    $censure = array('ą', 'ę', 'ś', 'ż', 'ź', 'ć', 'ó', 'ń', 'ł');
+    $replace = array('a', 'e', 's', 'z', 'z', 'c', 'o', 'n', 'l');
+
+    $correctName = str_replace($censure,$replace,$name);
+    echo 'Dane przed poprawą: ',$name;
+    echo '<br>';
+    echo 'Dane po poprawie: ',$correctName;
+    echo '<br>';
+    echo '<hr>';
+
+
+
 ?>
