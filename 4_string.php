@@ -46,6 +46,7 @@
     echo '<br>';
 
     //przeszukiwanie danych
+    echo '<hr>';
     $text = 'Poznan, ul. Rynek Jeżycki 13, tel. 61627 00 00';
     $search= strstr($text,'tel');
     echo $search;
@@ -56,5 +57,21 @@
     $search = stristr($text, 'Tel', true);
     echo $search;
     echo '<br>';
+    //czysczenie bufora
+    ob_clean();
+    //zad 1
     //znajdz domenę pobraną od użytkownika;
+
+    //przetwarzanie ciagów znaków
+    $replace=str_replace('%name%', 'Janusz', 'Masz na imię: %name%');
+    echo $replace;
+    echo '<br>';
+    echo '<hr>';
+    //substr
+    $surname = substr('Katarzyna Nowak',3);
+    echo $surname;//arzyna Nowak
+    echo '<br>';
+    $surname = substr('Katarzyna Nowak',3,5);
+    echo $surname;//arzyn
+    
 ?>
