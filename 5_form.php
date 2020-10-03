@@ -34,7 +34,30 @@
     else{
         echo 'Zatwierzdz zgody';
     }
-    //pola radio z wyborem jaki kolor(biały czy czarny)
+    /*pola radio z wyborem jaki kolor(biały czy czarny)
+
+    imię
+    nazwisko
+    rok urodzenia
+    miasto
+    kod pocztowy
+    kolor -> type'color'
+
+    Dokonaj wyświetlenia danych na stronie jak bedą wszystkie dane
+
+    Wykonaj sanitizacji kodu tzn
+    imię: Jan
+    nazwisko Nowak
+    ro urodzenia 1980
+    miasto Poznan
+    kod pocztowy wyświetl tylko cyframi
+
+    Dane wysłane za pomocą post
+    Wyswietl kolor (usun zanka #), wyswietl to w kolorze prze użytkownika
+
+    Jeśli użytkownik poda polskie znaki w mieśćie to zamień je na ***
+    */
+    
     ?>
 </body>
 </html>
