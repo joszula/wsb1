@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php
+session_start();
+?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 3 | Registration Page</title>
@@ -23,14 +26,28 @@
   <div class="register-logo">
     <a href="../index2.html"><b>Admin</b>LTE</a>
   </div>
-
+  <?php
+  if ( isset( $_SESSION['error'] ) ) {
+    $error = $_SESSION['error'];
+    echo <<<ERROR
+    <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h5><i class="icon fas fa-ban"></i> Błąd!</h5>
+        $error
+  </div>
+ERROR;
+    unset( $_SESSION['error']);
+    # code...
+  }
+   
+  ?>
   <div class="card">
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
 
-      <form action="../pages/add_users.php" method="post">
+      <form action="../scripts/add_user.php" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name">
+          <input type="text" class="form-control" name="name" placeholder="Imię">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -38,7 +55,15 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" class="form-control" name="surname" placeholder="Nazwisko">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" name="email1" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -46,7 +71,15 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="email" class="form-control" name="email2" placeholder="Powtórz email">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" name="password1" placeholder="Hasło">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -54,7 +87,24 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Retype password">
+          <input type="password" class="form-control" name="password2" placeholder="Powtórz hasło">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <!miasto pobrać z bazy>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="city" value="1">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-city"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="date" class="form-control" name="birthday" placeholder="Data urodzenia">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
