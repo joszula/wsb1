@@ -30,10 +30,7 @@
         $_SESSION['error']="Wypełnij wszystkie pola";
         header('location: ../pages/register.php');
         $error=1;
-    }
-
-        
-    
+    } 
 if($error == 1){
 ?>
     <script>
