@@ -48,7 +48,7 @@
     Wykonaj sanitizacji kodu tzn
     imię: Jan
     nazwisko Nowak
-    ro urodzenia 1980
+    rok urodzenia 1980
     miasto Poznan
     kod pocztowy wyświetl tylko cyframi
 
