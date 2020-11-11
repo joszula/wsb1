@@ -39,15 +39,15 @@ if($error == 1){
     <?php
     exit();
 }
-    echo'<pre>';
-    print_r($_POST);
-    echo'</pre>';
-    $name=$_POST["name"];
-    $surname=$_POST["surname"];
-    $password=$_POST["password1"];
-    $email=$_POST["email1"];
-    $birthday=$_POST["birthday"];
-    $city=$_POST["city"];
+    //echo'<pre>';
+   // print_r($_POST);
+   // echo'</pre>';
+    $name=trim($_POST["name"]);
+    $surname=trim($_POST["surname"]);
+    $password=trim($_POST["password1"]);
+    $email=trim($_POST["email1"]);
+    $birthday=trim($_POST["birthday"]);
+    $city=trim($_POST["city"]);
 
     $sql = "INSERT INTO `users` (`name`, `surname`, `email`, `password`, `city_id`, `birthday`) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
@@ -60,6 +60,6 @@ if($error == 1){
         header('location: ../pages/register.php');
         exit();      
     }
-    echo $conn->affected_rows;
+    //echo $conn->affected_rows;
     $stmt->close();
 ?>
