@@ -44,10 +44,11 @@ if($error == 1){
    // echo'</pre>';
     $name=trim($_POST["name"]);
     $surname=trim($_POST["surname"]);
-    $password=trim($_POST["password1"]);
+    $password=password_hash(trim($_POST["password1"]), PASSWORD_ARGON2ID);
     $email=trim($_POST["email1"]);
     $birthday=trim($_POST["birthday"]);
     $city=trim($_POST["city"]);
+
 
     $sql = "INSERT INTO `users` (`name`, `surname`, `email`, `password`, `city_id`, `birthday`) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
