@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WsbSite;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +53,17 @@ Route::get('user/{name}/{age?}', function (String $name, int $age = null) {
         echo "Wiek: $age";
     }
 })->where(['name'=>'[A-Za-z]+', 'age'=>'[0-9]+']);
+Route::get('site/{wsbsite}', [WsbSite::class, 'index']);
+Route::get('drives/{page}', [PageController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
